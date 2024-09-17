@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", system-ui;
+}
+:root{
+    --green:#596D48;
+    --secondary:#E5E7EB;
+    --primary:#000;
+    --white:#fff;
+    --secondary-bg:#f9fafb;
+    --bg-light:#fff;
+}
+body{
+    background-color: var(--secondary-bg);
+
+    section{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100vh;
+
+        .side-banner{
+            flex: 1;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?q=80&w=1862&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            padding: 125px 0;
+
+            .overlay{
+                background-color: rgba(0, 0, 0, 0.5);
+                padding: 25px 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                color: var(--white);
+                font-size: 74px;
+                font-weight: 900;
+                img{
+                    width: 85px;
+                }
+            }
+        }
+
+        .container{
+            flex: 2;
+
+            > div{
+                padding: 50px;
+                font-weight: 600;
+                font-size: 18px;
+            }
+
+            form{
+                .fields{
+                    box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 5px;
+                    background-color: var(--white);
+                    padding: 24px 50px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    gap: 20px;
+                    legend{
+                        font-weight: 600;
+                        font-size: 18px;
+                    }
+                    > div{
+                        display: flex;
+                        justify-content: center;
+                        align-items: start;
+                        flex-wrap: wrap;
+                        gap: 25px;
+
+                        fieldset{
+                            flex: 1;
+                            display: flex;
+                            flex-direction: column;
+                            border:none;
+
+                            small{
+                                color: red;
+                            }
+                            label{
+                                text-transform: uppercase;
+                                font-size: 16px;
+                                font-weight: 400;
+                            }
+                            input{
+                                width: 325px;
+                                padding: 4px 8px;
+                                border-radius: 5px;
+                                outline: none;
+                                border: 1px solid black;
+
+                                &:focus{
+                                    border:1px solid blue;
+                                    outline: none;
+                                    box-shadow: rgba(0,0,0,0.25) 1px 1px 1px;
+                                }
+
+                                &[type='password']:invalid{
+                                    border: 1px solid red;
+                                }
+                            }
+                        }
+                    }
+                }
+                .btnNLink{
+                    padding: 24px 50px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    gap: 25px;
+
+                    button[type='submit']{
+                        background-color: var(--green);
+                        border: none;
+                        padding: 15px 50px;
+                        border-radius: 8px;
+                        font-size: 18px;
+                        font-weight: 600;
+                        color: var(--white);
+                    }
+
+                    p{
+                        font-weight: 600;
+                        a{
+                            color: var(--green);
+                            font-weight: 700;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
